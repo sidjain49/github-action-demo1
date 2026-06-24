@@ -13,7 +13,7 @@ permissions:
 
 
 jobs:
-   terraorm resource:
+   terraormresource:
       name: resource group creation
       runs-on: ubuntu-latest
 
@@ -29,11 +29,15 @@ jobs:
 
        - name: Terraform Init
          run: terraform init
-         working-directory: ./infra/dev/provide.tf
+         working-directory: ./env/dev
+
        - name: terraform validate
          run: terraform validate
+         working-directory: ./env/dev
+         
        - name: terraform plan
-         run: terraform plan  
+         run: terraform plan
+         working-directory: ./env/dev  
 
 
   
