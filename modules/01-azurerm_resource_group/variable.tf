@@ -1,0 +1,2 @@
+﻿variable "rggg"{}
+variable "location" {}

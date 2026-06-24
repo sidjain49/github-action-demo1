@@ -1,0 +1,21 @@
+name: CI 
+
+on:
+  push:
+    branches:
+      - main
+      - features/**'
+
+
+permissions:
+  contents: read
+  id-token: write
+
+
+jobs:
+  terraorm resource:
+    name: resource group creation
+
+  steps:
+   - name: checkout
+     uses: octo-org/action-name@main
