@@ -15,6 +15,7 @@ permissions:
 jobs:
    terraorm resource:
       name: resource group creation
+      runs-on: ubuntu-latest
 
       steps:
        - name: checkout
